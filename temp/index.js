@@ -8,8 +8,7 @@ var arSource,
     arContext,
     arMarker = [];
 
-var
-    mesh,
+var mesh,
     sprite;
 
 init();
@@ -50,54 +49,56 @@ function init(){
 
     arMarker[0] = new THREEx.ArMarkerControls(arContext, camera, {
         type : 'pattern',
-        patternUrl : './assets/data/gdp.patt',
+        patternUrl : './assets/data/marker1.patt',
         changeMatrixMode: 'cameraTransformMatrix'
     });
 
     arMarker[0].addEventListener('markerFound', function(){
 
-      if(state !== 'gdp'){
+      if(state !== 'marker1'){
         material = new THREE.SpriteMaterial( { map: THREE.ImageUtils.loadTexture( "assets/data/GDP_O.png" ), color: 0xffffff, fog: true } );
         sprite = new THREE.Sprite( material );
         sprite.scale.set(3, 1.5, 1);
         scene.children[1] = sprite;
         console.log(scene.children)
-        state = 'gdp';
+        state = 'marker1';
       }
-      alert('expect gdp'); // Call transfer ownership here.
+      alert('expect marker1'); // Call transfer ownership here.
 
     })
 
     arMarker[1] = new THREEx.ArMarkerControls(arContext, camera, {
         type : 'pattern',
-        patternUrl : './assets/data/tg.patt',
+        patternUrl : './assets/data/marker2.patt',
         changeMatrixMode: 'cameraTransformMatrix'
     });
 
     arMarker[1].addEventListener('markerFound', function(){
-      if(state !== 'tg'){
+      if(state !== 'marker2'){
         material = new THREE.SpriteMaterial( { map: THREE.ImageUtils.loadTexture( "assets/data/TG_O.png" ), color: 0xffffff, fog: true } );
         sprite = new THREE.Sprite( material );
         sprite.scale.set(3, 1.5, 1);
         scene.children[1] = sprite;
-        state = 'tg';
+        state = 'marker2';
       }
+      alert('expect marker2'); // Call transfer ownership here.
     })
 
     arMarker[2] = new THREEx.ArMarkerControls(arContext, camera, {
         type : 'pattern',
-        patternUrl : './assets/data/sd.patt',
+        patternUrl : './assets/data/marker3.patt',
         changeMatrixMode: 'cameraTransformMatrix'
     });
 
     arMarker[2].addEventListener('markerFound', function(){
-      if(state !== 'sd'){
+      if(state !== 'marker3'){
         material = new THREE.SpriteMaterial( { map: THREE.ImageUtils.loadTexture( "assets/data/SD_O.png" ), color: 0xffffff, fog: true } );
         sprite = new THREE.Sprite( material );
         sprite.scale.set(3, 1.5, 1);
         scene.children[1] = sprite;
-        state = 'sd';
+        state = 'marker3';
       }
+      alert('expect marker3'); // Call transfer ownership here.
     })
 
     /* handle */
