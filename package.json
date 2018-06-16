@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gin/2018-angelhack#readme",
   "dependencies": {
+    "ethers": "^3.0.22",
     "express": "^4.16.3"
   }
 }
