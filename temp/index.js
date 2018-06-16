@@ -101,6 +101,24 @@ function init(){
       alert('expect marker3'); // Call transfer ownership here.
     })
 
+
+    arMarker[3] = new THREEx.ArMarkerControls(arContext, camera, {
+        type : 'pattern',
+        patternUrl : './assets/data/marker4.patt',
+        changeMatrixMode: 'cameraTransformMatrix'
+    });
+
+    arMarker[3].addEventListener('markerFound', function(){
+      if(state !== 'marker4'){
+        material = new THREE.SpriteMaterial( { map: THREE.ImageUtils.loadTexture( "assets/data/SD_O.png" ), color: 0xffffff, fog: true } );
+        sprite = new THREE.Sprite( material );
+        sprite.scale.set(3, 1.5, 1);
+        scene.children[1] = sprite;
+        state = 'marker4';
+      }
+      alert('expect marker4'); // Call transfer ownership here.
+    })
+
     /* handle */
     arSource.init(function(){
         arSource.onResize();
