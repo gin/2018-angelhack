@@ -64,6 +64,7 @@ function init(){
         console.log(scene.children)
         state = 'gdp';
       }
+      alert('expect gdp'); // Call transfer ownership here.
 
     })
 
