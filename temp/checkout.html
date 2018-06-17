@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--
+    Identity by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Decentralized Tickermaster</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+        <script src="https://jeromeetienne.github.io/AR.js/three.js/build/ar.min.js"></script>
+
+        <!-- This exposes the library as a global variable: ethers -->
+        <!--
+        <script src="https://cdn.ethers.io/scripts/ethers-v3.min.js"
+                charset="utf-8"
+                type="text/javascript">
+        </script>
+        -->
+
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <script src="assets/js/cool-stuff.js"></script>
+        <!-- <script src="index.js"></script> -->
+
+    </head>
+    <body class="is-loading">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section id="main">
+                <header>
+                    <h1>Checkout</h1>
+
+                    <!-- Change image depending on ticket ownership -->
+                    <img src="images/checkout.png" style="max-width: 100%" alt="" />
+                    <button>Pay</button>
+                </header>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="copyright">
+                    <li>&copy; lol</li>
+                </ul>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+        <script>
+if ('addEventListener' in window) {
+    window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+}
+        </script>
+
+
+    </body>
+</html>
